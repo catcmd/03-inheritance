@@ -8,15 +8,18 @@ public abstract class State {
      * Variable
      */
     protected static final Logger logger = LogManager.getLogger();
-    protected Animal animal;
 
     private int t;
     private int duration;
 
-    State tick()
-    {
-        return null; // current state
+    public State (int duration) {
     }
 
-    abstract State successor();
+    State tick(Cat cat)
+    {
+        return null; //current state
+    }
+
+
+    abstract State successor(Cat cat);
 }
